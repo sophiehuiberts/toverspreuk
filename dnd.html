@@ -45,8 +45,10 @@ function myFunction() {
             li[i].style.display = "";
             li[i+1].style.display = "";
         } else {
-            li[i].style.display = "none";
-            li[i+1].style.display = "none";
+            if ( ! li[i].children[0].children[0].checked) {
+                li[i].style.display = "none";
+                li[i+1].style.display = "none";
+            }
         }
     }
 }
